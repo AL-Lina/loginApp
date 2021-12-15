@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextViewDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameValueTF: UITextField!
     @IBOutlet weak var passwordValueTF: UITextField!
     
@@ -17,11 +17,22 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usernameValueTF.delegate = self
+        self.passwordValueTF.delegate = self
         usernameValueTF.clearButtonMode = .always
-        usernameValueTF.returnKeyType = UIReturnKeyType.next
         passwordValueTF.clearButtonMode = .always
-        passwordValueTF.returnKeyType = UIReturnKeyType.done
-        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.switchBaseNextTextField(textField)
+        return true
+    }
+    private func switchBaseNextTextField(_ textField: UITextField){
+        switch textField {
+        case self.usernameValueTF:
+            self.passwordValueTF.becomeFirstResponder()
+        default:
+            self.passwordValueTF.resignFirstResponder()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,11 +50,10 @@ class LoginViewController: UIViewController, UITextViewDelegate {
             return
         }
        
-            
-        
         if usernameValueTF.text != userName && passwordValueTF.text != password {
             showAlert(title: "Invalid username or password", message: "Please enter your name or password correctly")
         }
+    
     }
     
     @IBAction func forgotUserNameButtonTapped() {
