@@ -7,25 +7,55 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var usernameValueTF: UITextField!
     @IBOutlet weak var passwordValueTF: UITextField!
     
+    private let userName = "ALina"
+    private let password = "Fox"
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        usernameValueTF.clearButtonMode = .always
+        usernameValueTF.returnKeyType = UIReturnKeyType.next
+        passwordValueTF.clearButtonMode = .always
+        passwordValueTF.returnKeyType = UIReturnKeyType.done
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = usernameValueTF.text
+        welcomeVC.username = "Welcome, \(String(describing: usernameValueTF.text ?? ""))!"
     }
    
+    @IBAction func logInButtonTapped() {
+        guard let inputTextForName = usernameValueTF.text, !inputTextForName.isEmpty else {
+            showAlert(title: "Text field for username is empty", message: "Please enter your name")
+            return
+        }
+        guard let inputTextForPassword = passwordValueTF.text, !inputTextForPassword.isEmpty else {
+            showAlert(title: "Text field for password is empty", message: "Please enter your password")
+            return
+        }
+       
+            
+        
+        if usernameValueTF.text != userName && passwordValueTF.text != password {
+            showAlert(title: "Invalid username or password", message: "Please enter your name or password correctly")
+        }
+    }
+    
     @IBAction func forgotUserNameButtonTapped() {
         showAlert(title: "Oops!", message: "Your name is ALina")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(title: "Oops", message: "Your password is Fox" )
+        showAlert(title: "Oops!", message: "Your password is Fox" )
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
+        guard segue.source is WelcomeViewController else { return }
         usernameValueTF.text = ""
         passwordValueTF.text = ""
     }
