@@ -8,10 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBOutlet weak var usernameValueTF: UITextField!
+    @IBOutlet weak var passwordValueTF: UITextField!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = usernameValueTF.text
     }
    
     @IBAction func forgotUserNameButtonTapped() {
@@ -22,6 +24,11 @@ class LoginViewController: UIViewController {
         showAlert(title: "Oops", message: "Your password is Fox" )
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
+        usernameValueTF.text = ""
+        passwordValueTF.text = ""
+    }
 }
 
 // MARK: -
