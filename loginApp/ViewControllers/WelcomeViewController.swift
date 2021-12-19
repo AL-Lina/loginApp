@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController {
         gradientLayer.type = .axial
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        userNameValueLabel.text = username
+        userNameValueLabel.text = "Welcome, \(username ?? "")!"
     }
     
   

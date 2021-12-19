@@ -8,10 +8,13 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var usernameValueTF: UITextField!
     @IBOutlet weak var passwordValueTF: UITextField!
     
     let user = User.init(userName: "Alina", password: "Fox")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameValueTF.delegate = self
@@ -19,10 +22,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameValueTF.clearButtonMode = .always
         passwordValueTF.clearButtonMode = .always
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.switchBaseNextTextField(textField)
         return true
     }
+    
     private func switchBaseNextTextField(_ textField: UITextField){
         switch textField {
         case self.usernameValueTF:
@@ -32,30 +37,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first as? UITouch {
-            view.endEditing(true)
-        }
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = "Welcome, \(String(describing: usernameValueTF.text ?? ""))!"
+        welcomeVC.username = user.userName
     }
    
     @IBAction func logInButtonTapped() {
         guard let inputTextForName = usernameValueTF.text, !inputTextForName.isEmpty else {
-            showAlert(title: "Text field for username is empty", message: "Please enter your name")
+            showAlert(title: "Text field for username is empty",
+                      message: "Please enter your name")
             return
         }
+        
         guard let inputTextForPassword = passwordValueTF.text, !inputTextForPassword.isEmpty else {
-            showAlert(title: "Text field for password is empty", message: "Please enter your password")
+            showAlert(title: "Text field for password is empty",
+                      message: "Please enter your password")
             return
         }
        
         if usernameValueTF.text != user.userName && passwordValueTF.text != user.password {
-            showAlert(title: "Invalid username or password", message: "Please enter your name or password correctly")
+            showAlert(title: "Invalid username or password",
+                      message: "Please enter your name or password correctly")
         }
     
     }
