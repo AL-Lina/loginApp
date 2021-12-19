@@ -14,6 +14,8 @@
 		EDC1386C27694D9900218E45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC1386B27694D9900218E45 /* Assets.xcassets */; };
 		EDC1386F27694D9900218E45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC1386D27694D9900218E45 /* LaunchScreen.storyboard */; };
 		EDC1387727695BA700218E45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387627695BA700218E45 /* WelcomeViewController.swift */; };
+		EDC1387E276F926E00218E45 /* AboutMyselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387D276F926E00218E45 /* AboutMyselfViewController.swift */; };
+		EDC13880276FABD200218E45 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387F276FABD200218E45 /* MoreInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EDC1386E27694D9900218E45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC1387027694D9900218E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDC1387627695BA700218E45 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		EDC1387D276F926E00218E45 /* AboutMyselfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyselfViewController.swift; sourceTree = "<group>"; };
+		EDC1387F276FABD200218E45 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				EDC1387B276F90C500218E45 /* Models */,
-				EDC1387C276F90D100218E45 /* SupportFiles */,
 				EDC13878276F8FF400218E45 /* ViewControllers */,
 				EDC13879276F902100218E45 /* Storyboards */,
+				EDC1387C276F90D100218E45 /* SupportFiles */,
 				EDC1387A276F90B200218E45 /* Resourses */,
 			);
 			path = loginApp;
@@ -72,6 +76,8 @@
 			children = (
 				EDC1386627694D9300218E45 /* LoginViewController.swift */,
 				EDC1387627695BA700218E45 /* WelcomeViewController.swift */,
+				EDC1387D276F926E00218E45 /* AboutMyselfViewController.swift */,
+				EDC1387F276FABD200218E45 /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			files = (
 				EDC1386727694D9300218E45 /* LoginViewController.swift in Sources */,
 				EDC1387727695BA700218E45 /* WelcomeViewController.swift in Sources */,
+				EDC1387E276F926E00218E45 /* AboutMyselfViewController.swift in Sources */,
+				EDC13880276FABD200218E45 /* MoreInfoViewController.swift in Sources */,
 				EDC1386327694D9300218E45 /* AppDelegate.swift in Sources */,
 				EDC1386527694D9300218E45 /* SceneDelegate.swift in Sources */,
 			);
