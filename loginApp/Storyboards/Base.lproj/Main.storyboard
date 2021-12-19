@@ -389,7 +389,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-QU-8h0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutMe" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-QU-8h0">
                                 <rect key="frame" x="50" y="64" width="275" height="295.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="295.66666666666674" id="rhO-tb-cbQ"/>
@@ -449,6 +449,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aboutMe" width="508" height="627"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">

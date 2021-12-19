@@ -8,6 +8,7 @@
 import UIKit
 
 class AboutMyselfViewController: UIViewController {
+    let person = Person.init(name: "Алина", surname: "Саковская", age: "21", citizenship: "РБ", city: "Минсск", education: "БГАА", work: "ООО 'Авиакомпания Рада'", position: "Инженер", email: "lina-sokolova00@mail.ru")
 
     override func viewDidLoad() {
         super.viewDidLoad()

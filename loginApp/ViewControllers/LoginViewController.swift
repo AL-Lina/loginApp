@@ -11,10 +11,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameValueTF: UITextField!
     @IBOutlet weak var passwordValueTF: UITextField!
     
-    private let userName = "ALina"
-    private let password = "Fox"
-   
-    
+    let user = User.init(userName: "Alina", password: "Fox")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameValueTF.delegate = self
@@ -57,7 +54,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
        
-        if usernameValueTF.text != userName && passwordValueTF.text != password {
+        if usernameValueTF.text != user.userName && passwordValueTF.text != user.password {
             showAlert(title: "Invalid username or password", message: "Please enter your name or password correctly")
         }
     

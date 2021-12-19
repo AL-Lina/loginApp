@@ -16,6 +16,7 @@
 		EDC1387727695BA700218E45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387627695BA700218E45 /* WelcomeViewController.swift */; };
 		EDC1387E276F926E00218E45 /* AboutMyselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387D276F926E00218E45 /* AboutMyselfViewController.swift */; };
 		EDC13880276FABD200218E45 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1387F276FABD200218E45 /* MoreInfoViewController.swift */; };
+		EDC13882276FB8F500218E45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC13881276FB8F500218E45 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EDC1387627695BA700218E45 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EDC1387D276F926E00218E45 /* AboutMyselfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyselfViewController.swift; sourceTree = "<group>"; };
 		EDC1387F276FABD200218E45 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		EDC13881276FB8F500218E45 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		EDC1387B276F90C500218E45 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EDC13881276FB8F500218E45 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				EDC13880276FABD200218E45 /* MoreInfoViewController.swift in Sources */,
 				EDC1386327694D9300218E45 /* AppDelegate.swift in Sources */,
 				EDC1386527694D9300218E45 /* SceneDelegate.swift in Sources */,
+				EDC13882276FB8F500218E45 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,10 +26,6 @@ class WelcomeViewController: UIViewController {
         userNameValueLabel.text = username
     }
     
-    @IBAction func closeScreen() {
-        dismiss(animated: true)
-    }
-    
   
     }
     
